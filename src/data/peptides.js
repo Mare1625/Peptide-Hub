@@ -392,40 +392,8 @@ export const peptides = [
     "safetyNotes": "Monitor blood pressure closely during infusion.",
     "tags": [
       "Cardiometabolic & Vascular",
-      "fluid balance and blood pressure control"
-    ]
-  },
-  {
-    "id": "derm-9",
-    "name": "Body Firming Peptide Lotion",
-    "category": "Dermal & Aesthetic Support",
-    "mechanism": "Tetrapeptide complex supporting elastin and collagen in body skin",
-    "focus": "body contour maintenance",
-    "description": "Body Firming Peptide Lotion is a cosmetic-support peptide leveraged to stimulate collagen remodeling, improve skin tone, and address pigmentation irregularities. It focuses on body contour maintenance.",
-    "keyBenefits": [
-      "Improves skin tone",
-      "Reduces appearance of cellulite",
-      "Enhances hydration"
-    ],
-    "dosing": {
-      "loading": "Apply twice daily to target areas",
-      "maintenance": "Daily",
-      "timing": "Morning and evening"
-    },
-    "reconstitution": {
-      "diluent": "Bacteriostatic water",
-      "recommendedVolumeMl": 5.0,
-      "steps": [
-        "Sanitize the rubber stopper and allow the vial to warm slightly.",
-        "Add bacteriostatic water carefully to avoid frothing.",
-        "Invert gently several times until mixed; refrigerate between uses."
-      ],
-      "notes": "Use sterile technique and refrigerate reconstituted peptide unless otherwise specified."
-    },
-    "safetyNotes": "Combine with dry brushing for enhanced circulation.",
-    "tags": [
-      "Dermal & Aesthetic Support",
-      "body contour maintenance"
+      "fluid balance",
+      "blood pressure control"
     ]
   },
   {
@@ -458,7 +426,8 @@ export const peptides = [
     "safetyNotes": "Oral capsules can complement injections for GI support.",
     "tags": [
       "Muscle & Recovery",
-      "rapid soft-tissue and gut repair"
+      "rapid soft-tissue",
+      "gut repair"
     ]
   },
   {
@@ -590,7 +559,8 @@ export const peptides = [
     "safetyNotes": "Use medical supervision for parenteral administration.",
     "tags": [
       "Cognitive & Neurological",
-      "neuroprotection and recovery"
+      "neuroprotection",
+      "recovery"
     ]
   },
   {
@@ -658,7 +628,7 @@ export const peptides = [
       "Growth Hormone Secretagogues",
       "sustained GH release",
       "recovery",
-      "and lean mass preservation"
+      "lean mass preservation"
     ]
   },
   {
@@ -823,7 +793,8 @@ export const peptides = [
     "safetyNotes": "Cycle twice per year for cumulative benefits.",
     "tags": [
       "Longevity & Cellular Optimization",
-      "telomere support and sleep quality"
+      "telomere support",
+      "sleep quality"
     ]
   },
   {
@@ -856,7 +827,8 @@ export const peptides = [
     "safetyNotes": "Often cycled twice yearly in longevity protocols.",
     "tags": [
       "Cognitive & Neurological",
-      "sleep and longevity support"
+      "sleep",
+      "longevity support"
     ]
   },
   {
@@ -1021,7 +993,8 @@ export const peptides = [
     "safetyNotes": "Synergistic with AOD 9604 during cutting phases.",
     "tags": [
       "Metabolic & Weight Management",
-      "fat oxidation and stubborn area reduction"
+      "fat oxidation",
+      "stubborn area reduction"
     ]
   },
   {
@@ -1054,7 +1027,8 @@ export const peptides = [
     "safetyNotes": "Coordinate with reproductive endocrinologist for dosing windows.",
     "tags": [
       "Sexual Health & Vitality",
-      "ovarian and testicular support"
+      "ovarian",
+      "testicular support"
     ]
   },
   {
@@ -1252,7 +1226,8 @@ export const peptides = [
     "safetyNotes": "Avoid if struggling with glucose regulation or appetite control.",
     "tags": [
       "Growth Hormone Secretagogues",
-      "strong GH and appetite response for mass gaining phases"
+      "strong GH",
+      "appetite response for mass gaining phases"
     ]
   },
   {
@@ -1318,7 +1293,8 @@ export const peptides = [
     "safetyNotes": "Educate on managing GI side effects during titration.",
     "tags": [
       "Metabolic & Weight Management",
-      "appetite control and glycemic balance"
+      "appetite control",
+      "glycemic balance"
     ]
   },
   {
@@ -1417,7 +1393,8 @@ export const peptides = [
     "safetyNotes": "Monitor estradiol levels during combined therapy.",
     "tags": [
       "Sexual Health & Vitality",
-      "male fertility and libido preservation"
+      "male fertility",
+      "libido preservation"
     ]
   },
   {
@@ -1582,7 +1559,8 @@ export const peptides = [
     "safetyNotes": "Rotate injection sites and monitor blood glucose.",
     "tags": [
       "Muscle & Recovery",
-      "systemic hypertrophy and nutrient partitioning"
+      "systemic hypertrophy",
+      "nutrient partitioning"
     ]
   },
   {
@@ -1648,7 +1626,8 @@ export const peptides = [
     "safetyNotes": "Frequently combined with CJC-1295 for synergistic effect.",
     "tags": [
       "Growth Hormone Secretagogues",
-      "gentle GH pulses and appetite neutrality"
+      "gentle GH pulses",
+      "appetite neutrality"
     ]
   },
   {
@@ -1681,7 +1660,8 @@ export const peptides = [
     "safetyNotes": "Monitor reproductive hormone labs when stacking with HCG.",
     "tags": [
       "Sexual Health & Vitality",
-      "fertility and hormonal rejuvenation"
+      "fertility",
+      "hormonal rejuvenation"
     ]
   },
   {
@@ -1714,7 +1694,8 @@ export const peptides = [
     "safetyNotes": "Monitor phosphate and calcium levels periodically.",
     "tags": [
       "Longevity & Cellular Optimization",
-      "renal and cognitive longevity"
+      "renal",
+      "cognitive longevity"
     ]
   },
   {
@@ -1747,7 +1728,8 @@ export const peptides = [
     "safetyNotes": "Topical formulations can complement injections for skin.",
     "tags": [
       "Immune & Inflammatory Modulation",
-      "gut and skin inflammation control"
+      "gut",
+      "skin inflammation control"
     ]
   },
   {
@@ -1912,7 +1894,8 @@ export const peptides = [
     "safetyNotes": "Caution with nitrate medications; monitor blood pressure.",
     "tags": [
       "Sexual Health & Vitality",
-      "libido and erectile quality"
+      "libido",
+      "erectile quality"
     ]
   },
   {
@@ -1945,7 +1928,8 @@ export const peptides = [
     "safetyNotes": "Monitor for herx reactions; ramp slowly.",
     "tags": [
       "Immune & Inflammatory Modulation",
-      "immune defense and biofilm disruption"
+      "immune defense",
+      "biofilm disruption"
     ]
   },
   {
@@ -2044,7 +2028,8 @@ export const peptides = [
     "safetyNotes": "Monitor for freckles or nevi darkening.",
     "tags": [
       "Sexual Health & Vitality",
-      "gradual libido  and  skin tone enhancement"
+      "gradual libido",
+      "skin tone enhancement"
     ]
   },
   {
@@ -2077,7 +2062,8 @@ export const peptides = [
     "safetyNotes": "Advise on sun exposure management and hydration.",
     "tags": [
       "Metabolic & Weight Management",
-      "dual tanning and appetite control"
+      "dual tanning",
+      "appetite control"
     ]
   },
   {
@@ -2110,7 +2096,8 @@ export const peptides = [
     "safetyNotes": "Pair with adequate amino acids to support growth.",
     "tags": [
       "Muscle & Recovery",
-      "post-training repair and muscle satellite cell activation"
+      "post-training repair",
+      "muscle satellite cell activation"
     ]
   },
   {
@@ -2143,7 +2130,8 @@ export const peptides = [
     "safetyNotes": "Stack with exercise mimetics carefully to avoid overtraining.",
     "tags": [
       "Metabolic & Weight Management",
-      "glucose control and mitochondrial health"
+      "glucose control",
+      "mitochondrial health"
     ]
   },
   {
@@ -2444,54 +2432,23 @@ export const peptides = [
     ]
   },
   {
-    "id": "sex-7",
+    "id": "lon-6",
     "name": "Pinealon",
-    "category": "Sexual Health & Vitality",
-    "mechanism": "Pineal peptide complex supporting circadian-driven hormone release",
-    "focus": "hormonal harmony",
-    "description": "Pinealon is a peptide formulated to enhance sexual arousal, improve vascular responsiveness, and support overall vitality in both men and women. It focuses on hormonal harmony.",
+    "category": "Longevity & Cellular Optimization",
+    "mechanism": "Pineal peptide complex regulating circadian hormones and neuroendocrine aging",
+    "focus": "neuroendocrine rejuvenation and hormonal harmony",
+    "description": "Pinealon is a cellular-support peptide applied to regulate circadian signaling, DNA repair pathways, and overall longevity biomarkers. It focuses on neuroendocrine rejuvenation and hormonal harmony.",
     "keyBenefits": [
-      "Improves sleep-driven hormone rhythms",
-      "Supports libido through melatonin balance",
-      "Enhances overall vitality"
+      "Supports cognitive clarity",
+      "Normalizes circadian rhythms",
+      "Enhances libido through melatonin balance",
+      "Improves stress resilience",
+      "Boosts overall vitality"
     ],
     "dosing": {
       "loading": "10 mg orally nightly for 20 days",
       "maintenance": "10 mg weekly",
       "timing": "Evening before bed"
-    },
-    "reconstitution": {
-      "diluent": "Bacteriostatic water",
-      "recommendedVolumeMl": 1.0,
-      "steps": [
-        "Warm vial to ambient temperature before reconstitution.",
-        "Inject bacteriostatic water slowly down the side of the vial.",
-        "Rotate gently until dissolved; refrigerate following reconstitution."
-      ],
-      "notes": "Use sterile technique and refrigerate reconstituted peptide unless otherwise specified."
-    },
-    "safetyNotes": "Combine with stress management practices.",
-    "tags": [
-      "Sexual Health & Vitality",
-      "hormonal harmony"
-    ]
-  },
-  {
-    "id": "lon-6",
-    "name": "Pinealon",
-    "category": "Longevity & Cellular Optimization",
-    "mechanism": "Pineal peptide regulating neuroendocrine aging",
-    "focus": "neuroendocrine rejuvenation",
-    "description": "Pinealon is a cellular-support peptide applied to regulate circadian signaling, DNA repair pathways, and overall longevity biomarkers. It focuses on neuroendocrine rejuvenation.",
-    "keyBenefits": [
-      "Supports cognitive clarity",
-      "Normalizes circadian rhythms",
-      "Improves stress resilience"
-    ],
-    "dosing": {
-      "loading": "10 mg nightly for 20 days",
-      "maintenance": "10 mg weekly",
-      "timing": "Evening"
     },
     "reconstitution": {
       "diluent": "Sterile saline",
@@ -2503,10 +2460,11 @@ export const peptides = [
       ],
       "notes": "Use sterile technique and refrigerate reconstituted peptide unless otherwise specified."
     },
-    "safetyNotes": "Stacks well with Epitalon for pineal rejuvenation.",
+    "safetyNotes": "Pair with stress management practices and optionally stack with Epitalon.",
     "tags": [
       "Longevity & Cellular Optimization",
-      "neuroendocrine rejuvenation"
+      "neuroendocrine rejuvenation",
+      "hormonal harmony"
     ]
   },
   {
@@ -2836,7 +2794,8 @@ export const peptides = [
     "safetyNotes": "Layer under moisturizer for optimal absorption.",
     "tags": [
       "Dermal & Aesthetic Support",
-      "firmness and elasticity"
+      "firmness",
+      "elasticity"
     ]
   },
   {
@@ -2869,7 +2828,8 @@ export const peptides = [
     "safetyNotes": "Combine with BPC-157 for comprehensive tissue repair.",
     "tags": [
       "Muscle & Recovery",
-      "systemic healing and recovery"
+      "systemic healing",
+      "recovery"
     ]
   },
   {
@@ -3100,7 +3060,8 @@ export const peptides = [
     "safetyNotes": "Ensure zinc sufficiency; avoid concurrent high-dose iron.",
     "tags": [
       "Longevity & Cellular Optimization",
-      "immune and hormonal rejuvenation"
+      "immune",
+      "hormonal rejuvenation"
     ]
   },
   {

@@ -1045,22 +1045,6 @@ peptide_definitions = [
         "notes": "Store refrigerated and allow to reach room temp before use.",
     },
     {
-        "id": "sex-7",
-        "name": "Pinealon",
-        "category": "Sexual Health & Vitality",
-        "mechanism": "Pineal peptide complex supporting circadian-driven hormone release",
-        "focus": "hormonal harmony",
-        "benefits": [
-            "Improves sleep-driven hormone rhythms",
-            "Supports libido through melatonin balance",
-            "Enhances overall vitality",
-        ],
-        "loading": "10 mg orally nightly for 20 days",
-        "maintenance": "10 mg weekly",
-        "timing": "Evening before bed",
-        "notes": "Combine with stress management practices.",
-    },
-    {
         "id": "sex-8",
         "name": "HCG Microdose",
         "category": "Sexual Health & Vitality",
@@ -1235,22 +1219,6 @@ peptide_definitions = [
         "maintenance": "Weekly",
         "timing": "Evening or post-treatment",
         "notes": "Store chilled for soothing effect.",
-    },
-    {
-        "id": "derm-9",
-        "name": "Body Firming Peptide Lotion",
-        "category": "Dermal & Aesthetic Support",
-        "mechanism": "Tetrapeptide complex supporting elastin and collagen in body skin",
-        "focus": "body contour maintenance",
-        "benefits": [
-            "Improves skin tone",
-            "Reduces appearance of cellulite",
-            "Enhances hydration",
-        ],
-        "loading": "Apply twice daily to target areas",
-        "maintenance": "Daily",
-        "timing": "Morning and evening",
-        "notes": "Combine with dry brushing for enhanced circulation.",
     },
     {
         "id": "derm-10",
@@ -1672,17 +1640,19 @@ peptide_definitions = [
         "id": "lon-6",
         "name": "Pinealon",
         "category": "Longevity & Cellular Optimization",
-        "mechanism": "Pineal peptide regulating neuroendocrine aging",
-        "focus": "neuroendocrine rejuvenation",
+        "mechanism": "Pineal peptide complex regulating circadian hormones and neuroendocrine aging",
+        "focus": "neuroendocrine rejuvenation and hormonal harmony",
         "benefits": [
             "Supports cognitive clarity",
             "Normalizes circadian rhythms",
+            "Enhances libido through melatonin balance",
             "Improves stress resilience",
+            "Boosts overall vitality",
         ],
-        "loading": "10 mg nightly for 20 days",
+        "loading": "10 mg orally nightly for 20 days",
         "maintenance": "10 mg weekly",
-        "timing": "Evening",
-        "notes": "Stacks well with Epitalon for pineal rejuvenation.",
+        "timing": "Evening before bed",
+        "notes": "Pair with stress management practices and optionally stack with Epitalon.",
     },
     {
         "id": "lon-7",
@@ -2017,10 +1987,12 @@ def build_peptide(entry):
     defaults = category_defaults[entry["category"]]
     description = f"{entry['name']} is {defaults['base_overview']} It focuses on {entry['focus']}."
     tags = [entry["category"]]
-    for fragment in entry["focus"].replace("/", ",").replace("&", " and ").split(","):
-        token = fragment.strip()
-        if token and token not in tags:
-            tags.append(token)
+    focus_normalized = entry["focus"].replace("/", ",").replace("&", ",")
+    for fragment in focus_normalized.split(","):
+        for piece in fragment.split(" and "):
+            token = piece.strip()
+            if token and token not in tags:
+                tags.append(token)
     return {
         "id": entry["id"],
         "name": entry["name"],
