@@ -592,7 +592,7 @@ function shareStack(stack) {
   const html = `
     <html>
       <head>
-        <title>${stack.name} – PeptideIQ</title>
+        <title>${stack.name} – Peptide IQ</title>
         <style>
           body { font-family: 'Inter', system-ui, sans-serif; padding: 24px; color: #0f172a; }
           h1 { font-size: 26px; }
