@@ -153,7 +153,7 @@ function setActiveTab(tabId) {
     const isActive = panel.id === `tab-${tabId}`;
     panel.classList.toggle('is-active', isActive);
     panel.hidden = !isActive;
-    if (isActive) {
+    if (isActive && typeof panel.animate === 'function') {
       panel.animate(
         [{ opacity: 0, transform: 'translateY(12px)' }, { opacity: 1, transform: 'translateY(0)' }],
         { duration: 320, easing: 'cubic-bezier(0.16, 1, 0.3, 1)' }
