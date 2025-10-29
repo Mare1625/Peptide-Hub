@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Peptide IQ</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div class="hero__brand">
+          <span class="hero__badge">Peptide IQ</span>
+          <h1 class="hero__title">Modern peptide intelligence for self-directed learners</h1>
+          <p class="hero__subtitle">
+            Discover evidence-led peptide insights, stack with confidence, and translate vial math into an actionable plan. Built for mobile clarity with pro-ready depth.
+          </p>
+        </div>
+        <div class="hero__cta">
+          <button class="button button--primary" id="cta-upgrade">Unlock Pro – $4.99/mo</button>
+          <button class="button button--ghost" id="cta-learn">Why peptides?</button>
+        </div>
+      </header>
+
+      <nav class="tab-nav" role="tablist">
+        <button type="button" class="tab-nav__item is-active" role="tab" aria-controls="tab-library" data-tab="library">
+          <span>Library</span>
+        </button>
+        <button type="button" class="tab-nav__item" role="tab" aria-controls="tab-stacks" data-tab="stacks">
+          <span>Stacks</span>
+        </button>
+        <button type="button" class="tab-nav__item" role="tab" aria-controls="tab-calculator" data-tab="calculator">
+          <span>Calculator</span>
+        </button>
+        <button type="button" class="tab-nav__item" role="tab" aria-controls="tab-learn" data-tab="learn">
+          <span>Learn</span>
+        </button>
+      </nav>
+
+      <main class="tab-panels">
+        <section id="tab-library" class="tab-panel is-active" role="tabpanel">
+          <header class="panel-intro">
+            <h2>Peptide Library</h2>
+            <p>Swipe-friendly cards with effect, use guidance, and research-backed quick facts.</p>
+          </header>
+
+          <div class="library-controls">
+            <label class="field">
+              <span class="field__label">Search or ask</span>
+              <div class="field__combo">
+                <input
+                  type="search"
+                  id="library-search"
+                  placeholder="Search peptides, e.g. 'BPC-157' or ask 'fat loss peptides'"
+                  autocomplete="off"
+                />
+                <button class="icon-button" id="ai-search-button" title="Ask the assistant">
+                  <span>🤖</span>
+                </button>
+              </div>
+            </label>
+            <label class="field">
+              <span class="field__label">Filter by goal</span>
+              <select id="library-filter">
+                <option value="all">All focuses</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="ai-response" id="ai-response" hidden></div>
+
+          <div class="library-grid" id="library-grid"></div>
+        </section>
+
+        <section id="tab-stacks" class="tab-panel" role="tabpanel">
+          <header class="panel-intro">
+            <h2>Curated Stacks</h2>
+            <p>Goal-driven blends with mix instructions, weekly rhythm, and compliance notes.</p>
+          </header>
+
+          <div class="stacks-toolbar">
+            <label class="field">
+              <span class="field__label">Focus</span>
+              <select id="stack-filter">
+                <option value="all">All goals</option>
+              </select>
+            </label>
+            <div class="membership-pill" id="membership-pill">Pro unlocks premium blends & exports</div>
+          </div>
+
+          <div class="stack-grid" id="stack-grid"></div>
+
+          <aside class="saved-panel" id="saved-stacks" hidden>
+            <h3>Saved stacks</h3>
+            <ul id="saved-stacks-list"></ul>
+          </aside>
+        </section>
+
+        <section id="tab-calculator" class="tab-panel" role="tabpanel">
+          <header class="panel-intro">
+            <h2>Peptide Calculator</h2>
+            <p>Conversational sliders to translate vial labels into precise doses.</p>
+          </header>
+
+          <form id="calc-form" class="calc-card" autocomplete="off">
+            <div class="slider-group">
+              <label class="slider-field">
+                <div class="slider-meta">
+                  <span>Vial amount (mg)</span>
+                  <output id="vial-amount-output">5</output>
+                </div>
+                <input type="range" min="1" max="50" value="5" step="0.5" id="vial-amount" />
+              </label>
+
+              <label class="slider-field">
+                <div class="slider-meta">
+                  <span>Reconstitution volume (mL)</span>
+                  <output id="reconstitution-output">2.5</output>
+                </div>
+                <input type="range" min="0.5" max="10" value="2.5" step="0.1" id="reconstitution-volume" />
+              </label>
+
+              <label class="slider-field">
+                <div class="slider-meta">
+                  <span>Desired dose (mg)</span>
+                  <output id="desired-dose-output">1</output>
+                </div>
+                <input type="range" min="0.1" max="10" value="1" step="0.1" id="desired-dose" />
+              </label>
+
+              <label class="slider-field">
+                <div class="slider-meta">
+                  <span>Doses per week</span>
+                  <output id="frequency-output">3</output>
+                </div>
+                <input type="range" min="1" max="14" value="3" step="1" id="weekly-frequency" />
+              </label>
+            </div>
+            <div class="calc-actions">
+              <button class="button button--primary" type="submit">Calculate my draw</button>
+              <button class="button button--ghost" type="button" id="reset-calculator">Reset</button>
+            </div>
+          </form>
+
+          <div class="calc-results" id="calc-results" hidden>
+            <div class="result-line">
+              <span>Injection volume</span>
+              <strong id="result-volume">0.00 mL</strong>
+            </div>
+            <div class="result-line">
+              <span>Weekly schedule</span>
+              <strong id="result-frequency">3 doses/week</strong>
+            </div>
+            <div class="result-actions">
+              <button class="button button--primary" id="save-plan">Save to my plan</button>
+              <button class="button button--ghost" id="share-plan">Export PDF</button>
+            </div>
+          </div>
+
+          <section class="saved-panel" id="saved-plans" hidden>
+            <h3>Saved plans</h3>
+            <ul id="saved-plans-list"></ul>
+          </section>
+        </section>
+
+        <section id="tab-learn" class="tab-panel" role="tabpanel">
+          <header class="panel-intro">
+            <h2>Learn &amp; Stay Safe</h2>
+            <p>Digestible primers, affiliate partners, and safety essentials for peptide explorers.</p>
+          </header>
+
+          <article class="learn-card">
+            <h3>Protocol fundamentals</h3>
+            <ul>
+              <li>Start with a <strong>singular goal</strong> (sleep, lean mass, recovery) before layering stacks.</li>
+              <li>Maintain a <strong>12-16 week cycle</strong> with deliberate deloads and lab checkpoints.</li>
+              <li>Pair every intervention with <strong>nutrition, training, and sleep hygiene</strong> for compounding effects.</li>
+            </ul>
+          </article>
+
+          <article class="learn-card">
+            <h3>Safety guardrails</h3>
+            <ul>
+              <li>Source from accredited compounding pharmacies; review COAs and sterility data.</li>
+              <li>Follow <strong>aseptic technique</strong>, rotate injection sites, and monitor biomarkers quarterly.</li>
+              <li>Consult licensed professionals; this app is <strong>for research and education only</strong>.</li>
+            </ul>
+          </article>
+
+          <article class="learn-card">
+            <h3>Affiliate partners</h3>
+            <p>
+              Explore vetted suppliers for research-only peptides. Purchases may earn Peptide IQ a commission.
+            </p>
+            <ul class="affiliate-list">
+              <li><a href="#" rel="nofollow">BioLab Research Supply</a> – GMP-grade peptides with third-party testing.</li>
+              <li><a href="#" rel="nofollow">Precision Peptide Co.</a> – Subscriptions with cold-chain shipping.</li>
+              <li><a href="#" rel="nofollow">SterileMix Tools</a> – Kits for reconstitution and dosing accuracy.</li>
+            </ul>
+            <p class="disclaimer">Always verify legality within your jurisdiction.</p>
+          </article>
+
+          <article class="learn-card learn-card--pro">
+            <h3>Pro unlock</h3>
+            <p>
+              Upgrade for AI-personalized stacks, Supabase sync across devices, and unlimited PDF exports.
+            </p>
+            <button class="button button--primary" id="learn-upgrade">Upgrade to Pro</button>
+          </article>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <p>Educational use only. Consult healthcare professionals before initiating peptide protocols.</p>
+      </footer>
+    </div>
+
+    <div class="modal" id="peptide-modal" role="dialog" aria-modal="true" hidden>
+      <div class="modal__backdrop" id="modal-backdrop"></div>
+      <div class="modal__card" role="document">
+        <button class="modal__close" id="modal-close" aria-label="Close quick facts">✕</button>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
